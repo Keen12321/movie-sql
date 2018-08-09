@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ContentFilters</key>
+	<dict/>
+	<key>auto_connect</key>
+	<true/>
+	<key>data</key>
+	<dict>
+		<key>connection</key>
+		<dict>
+			<key>database</key>
+			<string>movies</string>
+			<key>host</key>
+			<string>localhost</string>
+			<key>name</key>
+			<string>localhost</string>
+			<key>rdbms_type</key>
+			<string>mysql</string>
+			<key>sslCACertFileLocation</key>
+			<string></string>
+			<key>sslCACertFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslCertificateFileLocation</key>
+			<string></string>
+			<key>sslCertificateFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslKeyFileLocation</key>
+			<string></string>
+			<key>sslKeyFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>type</key>
+			<string>SPSocketConnection</string>
+			<key>useSSL</key>
+			<integer>0</integer>
+			<key>user</key>
+			<string>root</string>
+		</dict>
+		<key>session</key>
+		<dict>
+			<key>connectionEncoding</key>
+			<string>utf8</string>
+			<key>contentFilter</key>
+			<dict/>
+			<key>contentPageNumber</key>
+			<integer>1</integer>
+			<key>contentSelection</key>
+			<data>
+			YnBsaXN0MDDUAQIDBAUGOjtYJHZlcnNpb25YJG9iamVjdHNZJGFy
+			Y2hpdmVyVCR0b3ASAAGGoK8QDwcIFRYXGBkfICEoLDA0OFUkbnVs
+			bNMJCgsMEBRXTlMua2V5c1pOUy5vYmplY3RzViRjbGFzc6MNDg+A
+			AoADgASjERITgAWABoAKgA5UdHlwZVRyb3dzVGtleXNfECZTZWxl
+			Y3Rpb25EZXRhaWxUeXBlUHJpbWFyeUtleWVkRGV0YWlsc9MJCgsa
+			HB6hG4AHoR2ACIAJUTIJ0iIjJCVaJGNsYXNzbmFtZVgkY2xhc3Nl
+			c18QE05TTXV0YWJsZURpY3Rpb25hcnmjJCYnXE5TRGljdGlvbmFy
+			eVhOU09iamVjdNIKCykroSqAC4AN0gstLi9ZTlMuc3RyaW5ngAxS
+			aWTSIiMxMl8QD05TTXV0YWJsZVN0cmluZ6MxMydYTlNTdHJpbmfS
+			IiM1Nl5OU011dGFibGVBcnJheaM1NydXTlNBcnJhedIiIyY5oiYn
+			XxAPTlNLZXllZEFyY2hpdmVy0Tw9VGRhdGGAAQAIABEAGgAjAC0A
+			MgA3AEkATwBWAF4AaQBwAHQAdgB4AHoAfgCAAIIAhACGAIsAkACV
+			AL4AxQDHAMkAywDNAM8A0QDSANcA4gDrAQEBBQESARsBIAEiASQB
+			JgErATUBNwE6AT8BUQFVAV4BYwFyAXYBfgGDAYYBmAGbAaAAAAAA
+			AAACAQAAAAAAAAA+AAAAAAAAAAAAAAAAAAABog==
+			</data>
+			<key>contentSortCol</key>
+			<string>movie_id</string>
+			<key>contentSortColIsAsc</key>
+			<false/>
+			<key>contentViewport</key>
+			<string>{{0, 0}, {1226, 760}}</string>
+			<key>isToolbarVisible</key>
+			<true/>
+			<key>queries</key>
+			<string>SELECT *
+FROM movies;
+
+SELECT id, title
+FROM movies
+LIMIT 10;
+
+SELECT *
+FROM movies
+WHERE id = 485;
+
+SELECT id
+FROM movies
+WHERE title = 'Made in America (1993)';
+
+SELECT *
+FROM movies
+WHERE id &lt; 11 
+ORDER BY title ASC;
+
+SELECT *
+FROM movies
+WHERE title LIKE '%(2002)';
+
+SELECT *
+FROM movies
+WHERE title LIKE 'godfather%';
+
+SELECT *
+FROM movies
+WHERE genres LIKE '%comedy%';
+
+SELECT *
+FROM movies
+WHERE (title LIKE '%death%' AND genres LIKE '%comedy%');
+
+SELECT *
+FROM movies
+WHERE (title LIKE '%(2001)' OR title LIKE '%(2002)') AND title LIKE '%super%';
+
+INSERT INTO actors (movie_id, name, character_name, dob)
+VALUES (1, 'Al Pacino', 'Scarface', 'April 25, 1940', 1, 'Bob', 'Lacka', 'January 25, 1962', 1, 'Cole', 'Leaky', 'April 27, 1990', 1, 'Stanley', 'Blart', 'December 29, 1978', 1, 'Woody', 'Woody', 'Feburary 17, 1989', 1, 'Reaky', 'Buzz Light', 'May 12, 2000', 1, 'Gallus', 'Cristina', 'September 24, 1989', 1, 'Esther Jela', 'Elzė Salut', 'July 4, 1804', 1, 'Vassiliki Nasrin', 'Judita Mani', 'November 2, 1999', 1, 'Enes Evelina', 'Flamur Firuza', 'September 5, 1999');
+
+INSERT INTO actors (movie_id, name, character_name, dob)
+VALUES (1, 'Al Pacino', 'Scarface', 'April 25, 1940');
+
+INSERT INTO actors (movie_id, name, character_name, dob)
+VALUES (1, 'Bob', 'Lacka', 'January 25, 1962');
+
+INSERT INTO actors (movie_id, name, character_name, dob)
+VALUES (1, 'Cole', 'Leaky', 'April 27, 1990');
+
+INSERT INTO actors (movie_id, name, character_name, dob)
+VALUES (1, 'Stanley', 'Blart', 'December 29, 1978');
+
+INSERT INTO actors (movie_id, name, character_name, dob)
+VALUES (1, 'Woody', 'Woody', 'Feburary 17, 1989');
+
+INSERT INTO actors (movie_id, name, character_name, dob)
+VALUES (1, 'Reaky', 'Buzz Light', 'May 12, 2000');
+
+INSERT INTO actors (movie_id, name, character_name, dob)
+VALUES (1, 'Gallus', 'Cristina', 'September 24, 1989');
+
+INSERT INTO actors (movie_id, name, character_name, dob)
+VALUES (1, 'Esther Jela', 'Elzė Salut', 'July 4, 1804');
+
+INSERT INTO actors (movie_id, name, character_name, dob)
+VALUES (1, 'Vassiliki Nasrin', 'Judita Mani', 'November 2, 1999');
+
+INSERT INTO actors (movie_id, name, character_name, dob)
+VALUES (1, 'Enes Evelina', 'Flamur Firuza', 'September 5, 1999');
+
+</string>
+			<key>table</key>
+			<string>actors</string>
+			<key>view</key>
+			<string>SP_VIEW_CUSTOMQUERY</string>
+			<key>windowVerticalDividerPosition</key>
+			<real>214</real>
+		</dict>
+	</dict>
+	<key>encrypted</key>
+	<false/>
+	<key>format</key>
+	<string>connection</string>
+	<key>queryFavorites</key>
+	<array/>
+	<key>queryHistory</key>
+	<array>
+		<string>INSERT INTO actors (movie_id, name, character_name, dob)
+VALUES (1, 'Enes Evelina', 'Flamur Firuza', 'September 5, 1999')</string>
+		<string>INSERT INTO actors (movie_id, name, character_name, dob)
+VALUES (1, 'Vassiliki Nasrin', 'Judita Mani', 'November 2, 1999')</string>
+		<string>INSERT INTO actors (movie_id, name, character_name, dob)
+VALUES (1, 'Esther Jela', 'Elzė Salut', 'July 4, 1804')</string>
+		<string>INSERT INTO actors (movie_id, name, character_name, dob)
+VALUES (1, 'Gallus', 'Cristina', 'September 24, 1989')</string>
+		<string>INSERT INTO actors (movie_id, name, character_name, dob)
+VALUES (1, 'Reaky', 'Buzz Light', 'May 12, 2000')</string>
+		<string>INSERT INTO actors (movie_id, name, character_name, dob)
+VALUES (1, 'Woody', 'Woody', 'Feburary 17, 1989')</string>
+		<string>INSERT INTO actors (movie_id, name, character_name, dob)
+VALUES (1, 'Stanley', 'Blart', 'December 29, 1978')</string>
+		<string>INSERT INTO actors (movie_id, name, character_name, dob)
+VALUES (1, 'Cole', 'Leaky', 'April 27, 1990')</string>
+		<string>INSERT INTO actors (movie_id, name, character_name, dob)
+VALUES (1, 'Bob', 'Lacka', 'January 25, 1962')</string>
+		<string>INSERT INTO actors (movie_id, name, character_name, dob)
+VALUES (1, 'Al Pacino', 'Scarface', 'April 25, 1940')</string>
+		<string>INSERT INTO actors (movie_id, name, character_name, dob)
+VALUES (1, 'Al Pacino', 'Scarface', 'April 25, 1940')
+
+INSERT INTO actors (movie_id, name, character_name, dob)
+VALUES (1, 'Bob', 'Lacka', 'January 25, 1962')
+
+INSERT INTO actors (movie_id, name, character_name, dob)
+VALUES (1, 'Cole', 'Leaky', 'April 27, 1990')</string>
+		<string>INSERT INTO actors (movie_id, name, character_name, dob)
+VALUES (1, 'Al Pacino', 'Scarface', 'April 25, 1940', 1, 'Bob', 'Lacka', 'January 25, 1962', 1, 'Cole', 'Leaky', 'April 27, 1990', 1, 'Stanley', 'Blart', 'December 29, 1978', 1, 'Woody', 'Woody', 'Feburary 17, 1989', 1, 'Reaky', 'Buzz Light', 'May 12, 2000', 1, 'Gallus', 'Cristina', 'September 24, 1989', 1, 'Esther Jela', 'Elzė Salut', 'July 4, 1804', 1, 'Vassiliki Nasrin', 'Judita Mani', 'November 2, 1999', 1, 'Enes Evelina', 'Flamur Firuza', 'September 5, 1999')</string>
+		<string>INSERT INTO actors (movie_id, name, character_name, dob)
+VALUES (1, 'Al Pacino', 'Scarface' 'April 25, 1940')</string>
+		<string>INSERT INTO actors
+VALUES (1, 'Al Pacino', 'Scarface' 'April 25, 1940')</string>
+		<string>INSERT INTO actors (*)
+VALUES (1, 'Al Pacino', 'Scarface' 'April 25, 1940')</string>
+		<string>INSERT INTO actors
+VALUES (1, 1, 'Al Pacino', 'Scarface' 'April 25, 1940')</string>
+		<string>INSERT INTO actors
+VALUES (11, 'Al Pacino', 'Scarface' 'April 25, 1940')</string>
+		<string>INSERT INTO actors
+VALUES ('Al Pacino', 'Scarface' 'April 25, 1940')</string>
+		<string>SELECT *
+FROM movies
+WHERE (title LIKE '%(2001)' OR title LIKE '%(2002)') AND title LIKE '%super%'</string>
+		<string>SELECT *
+FROM movies
+WHERE (title LIKE '%(2001)' OR title LIKE '%(2002)') AND (title LIKE '%super%')</string>
+	</array>
+	<key>rdbms_type</key>
+	<string>mysql</string>
+	<key>rdbms_version</key>
+	<string>5.7.21</string>
+	<key>version</key>
+	<integer>1</integer>
+</dict>
+</plist>

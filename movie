@@ -1,0 +1,42 @@
+SELECT *
+FROM movies;
+
+SELECT id, title
+FROM movies
+LIMIT 10;
+
+SELECT *
+FROM movies
+WHERE id = 485;
+
+SELECT id
+FROM movies
+WHERE title = 'Made in America (1993)';
+
+SELECT *
+FROM movies
+WHERE id < 11 
+ORDER BY title ASC;
+
+SELECT *
+FROM movies
+WHERE title LIKE '%(2002)';
+
+SELECT *
+FROM movies
+WHERE title LIKE 'godfather%';
+
+SELECT *
+FROM movies
+WHERE genres LIKE '%comedy%';
+
+SELECT *
+FROM movies
+WHERE (title LIKE '%death%' AND genres LIKE '%comedy%');
+
+SELECT *
+FROM movies
+WHERE (title LIKE '%(2001)' OR title LIKE '%(2002)') AND title LIKE '%super%';
+
+INSERT INTO actors
+VALUES (1, 'Al Pacino', 'Scarface' 'April 25, 1940')
